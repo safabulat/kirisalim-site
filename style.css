@@ -1,0 +1,55 @@
+/* Kırışalım — tanıtım sitesi. Uygulamanın renkleri: deniz yeşili, mercan, altın, krem.
+   Çerçeve yok, derleme yok, dış istek yok: birkaç HTML ve bu dosya. Açık tema önce (uygulama da öyle),
+   koyu tema gerçek bir tasarım. */
+:root {
+  --teal: #0F766E; --teal-soft: #e3f1ef; --coral: #F26B5B; --gold: #F4B63F;
+  --bg: #FFF9F2; --raise: #ffffff; --line: #efe4d6; --ink: #15201e; --soft: #55625f; --faint: #8a9491;
+  --radius: 18px; --page: 1040px;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #0e1413; --raise: #18211f; --line: #25302d; --ink: #eef3f2; --soft: #a6b3b0; --faint: #72807c;
+          --teal: #4fd1bd; --teal-soft: #173430; }
+  .btn { color: #0b1a18 }
+}
+* { box-sizing: border-box }
+html { -webkit-text-size-adjust: 100% }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif }
+a { color: var(--teal) }
+.wrap { max-width: var(--page); margin: 0 auto; padding: 0 20px }
+header { border-bottom: 1px solid var(--line) }
+header .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 16px }
+.wordmark { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 19px; color: var(--ink); text-decoration: none }
+.wordmark img { width: 32px; height: 32px; border-radius: 22.5% }
+nav { display: flex; gap: 18px; font-size: 15px }
+nav a { color: var(--soft); text-decoration: none }
+nav a:hover { color: var(--ink) }
+.hero { display: grid; grid-template-columns: 1.1fr .9fr; gap: 40px; align-items: center; padding: 56px 20px 40px }
+.hero img.icon { width: 96px; height: 96px; border-radius: 22.5%; box-shadow: 0 10px 30px rgba(0,0,0,.12) }
+h1 { font-size: clamp(34px, 5vw, 52px); line-height: 1.08; margin: 18px 0 14px; letter-spacing: -.02em }
+.lede { font-size: 19px; color: var(--soft); margin: 0 0 22px }
+.btns { display: flex; gap: 12px; flex-wrap: wrap }
+.btn { display: inline-block; padding: 13px 20px; border-radius: 14px; background: var(--teal); color: #fff; font-weight: 700; text-decoration: none }
+.btn.ghost { background: var(--teal-soft); color: var(--teal) }
+.note { font-size: 14px; color: var(--faint); margin-top: 12px }
+.phones { display: flex; gap: 14px; justify-content: center }
+.phones img { width: 46%; max-width: 230px; border-radius: 28px; border: 1px solid var(--line); box-shadow: 0 14px 40px rgba(0,0,0,.12) }
+.phones img:nth-child(2) { margin-top: 40px }
+section { padding: 40px 0; border-top: 1px solid var(--line) }
+h2 { font-size: 28px; margin: 0 0 18px; letter-spacing: -.01em }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px }
+.card { background: var(--raise); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px }
+.card h3 { margin: 0 0 6px; font-size: 18px }
+.card p { margin: 0; color: var(--soft); font-size: 15.5px }
+.dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 8px; vertical-align: middle }
+.doc { max-width: 760px; padding-top: 36px; padding-bottom: 60px }
+.doc h1 { font-size: 36px }
+.doc h2 { font-size: 21px; margin-top: 32px }
+.updated { color: var(--faint); font-size: 14px }
+footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--faint); font-size: 14px }
+footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap }
+.code { font: 800 44px/1 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: 8px; color: var(--teal);
+        background: var(--raise); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; text-align: center; margin: 18px 0 }
+@media (max-width: 760px) {
+  .hero { grid-template-columns: 1fr; padding-top: 32px }
+  nav { gap: 12px }
+}

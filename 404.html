@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="darkreader-lock">
+<title>Kırışalım — eve davet</title>
+<link rel="icon" href="/kirisalim-site/img/icon.png">
+<link rel="stylesheet" href="/kirisalim-site/style.css">
+</head>
+<body>
+<header><div class="wrap"><a class="wordmark" href="/kirisalim-site/"><img src="/kirisalim-site/img/icon.png" alt="">Kırışalım</a></div></header>
+<!-- Davet linki: /kirisalim-site/j/KOD. GitHub Pages bilinmeyen her yol için bu sayfayı açar; kodu adresten okuruz. -->
+<div class="wrap doc" id="invite" hidden>
+  <h1>Eve davet edildin</h1>
+  <p>Kırışalım'ı aç, <b>Eve katıl</b>'a gir ve bu kodu yaz:</p>
+  <div class="code" id="code"></div>
+  <p>Uygulama henüz yüklü değilse: <a href="https://testflight.apple.com/join/q9A7ay5w">iPhone için TestFlight</a>. Android sürümünü seni davet eden kişiden isteyebilirsin.</p>
+</div>
+<div class="wrap doc" id="missing" hidden>
+  <h1>Burada bir şey yok</h1>
+  <p><a href="/kirisalim-site/">Ana sayfaya dön</a></p>
+</div>
+<script>
+  const m = location.pathname.match(/\/j\/([A-Za-z2-9]{6})\/?$/);
+  if (m) { document.getElementById('code').textContent = m[1].toUpperCase(); document.getElementById('invite').hidden = false; }
+  else { document.getElementById('missing').hidden = false; }
+</script>
+</body>
+</html>
