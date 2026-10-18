@@ -42,8 +42,8 @@ _flutter.buildConfig = {"engineRevision":"af7e796e161ae0bb1ff0758c71a7105418bd9d
 
 
 // Ağır dosyalar (main.dart.js, varlıklar) GitHub Pages'ten değil jsDelivr'den: Türkiye'den Pages ~20 KB/s.
-// tools/publish-web.sh "https://cdn.jsdelivr.net/gh/safabulat/kirisalim-site@5373aa15bf594a60b2efe575acddc2bbbf30e025/app/" yerine commit'e sabitli adresi yazar; yerelde boş kalır → aynı klasör.
-const cdn = 'https://cdn.jsdelivr.net/gh/safabulat/kirisalim-site@5373aa15bf594a60b2efe575acddc2bbbf30e025/app/'.startsWith('https://') ? 'https://cdn.jsdelivr.net/gh/safabulat/kirisalim-site@5373aa15bf594a60b2efe575acddc2bbbf30e025/app/' : '';
+// tools/publish-web.sh "__KIRISALIM_CDN__" yerine commit'e sabitli adresi yazar; yerelde boş kalır → aynı klasör.
+const cdn = '__KIRISALIM_CDN__'.startsWith('https://') ? '__KIRISALIM_CDN__' : '';
 _flutter.loader.load({
   config: cdn ? { entrypointBaseUrl: cdn, assetBase: cdn } : {},
 });
