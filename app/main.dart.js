@@ -50732,7 +50732,7 @@ $1$textScaler(a){return this.K(this,A.J("call","$1$textScaler",0,[a],["textScale
 $2$reason$scope(a,b){return this.K(this,A.J("call","$2$reason$scope",0,[a,b],["reason","scope"],0))},
 $1$fontWeight(a){return this.K(this,A.J("call","$1$fontWeight",0,[a],["fontWeight"],0))},
 $1$2(a,b,c){return this.K(this,A.J("call","$1$2",0,[a,b,c],[],1))},
-$3$data$email$password(a,b,c){return this.K(this,A.J("call","$3$data$email$password",0,[a,b,c],["data","email","password"],0))},
+$4$data$email$emailRedirectTo$password(a,b,c,d){return this.K(this,A.J("call","$4$data$email$emailRedirectTo$password",0,[a,b,c,d],["data","email","emailRedirectTo","password"],0))},
 $2$email$password(a,b){return this.K(this,A.J("call","$2$email$password",0,[a,b],["email","password"],0))},
 $1$queryParameters(a){return this.K(this,A.J("call","$1$queryParameters",0,[a],["queryParameters"],0))},
 $2$headers(a,b){return this.K(this,A.J("call","$2$headers",0,[a,b],["headers"],0))},
@@ -109231,18 +109231,18 @@ break
 case 6:case 1:return A.q(q,r)
 case 2:return A.p(o.at(-1),r)}})
 return A.r($async$B1,r)},
-wL(a,b,c){return this.af_(a,b,c)},
-af_(a,b,c){var s=0,r=A.t(t.W8),q,p=this,o,n,m,l,k,j,i
-var $async$wL=A.o(function(d,e){if(d===1)return A.p(e,r)
+wL(a,b,c,d){return this.af_(a,b,c,d)},
+af_(a,b,c,d){var s=0,r=A.t(t.W8),q,p=this,o,n,m,l,k,j,i
+var $async$wL=A.o(function(e,f){if(e===1)return A.p(f,r)
 for(;;)switch(s){case 0:s=3
 return A.l(p.apq(),$async$wL)
-case 3:o=e
+case 3:o=f
 n=p.goZ()
 m=t.N
 l=A.Z(["captcha_token",null],m,t.T)
 s=4
-return A.l(n.m9(p.f+"/signup",B.ih,A.td(A.Z(["email",b,"password",c,"data",a,"gotrue_meta_security",l,"code_challenge",o,"code_challenge_method",o!=null?"s256":null],m,t.z),p.r,null,null,null,null)),$async$wL)
-case 4:k=e
+return A.l(n.m9(p.f+"/signup",B.ih,A.td(A.Z(["email",b,"password",d,"data",a,"gotrue_meta_security",l,"code_challenge",o,"code_challenge_method",o!=null?"s256":null],m,t.z),p.r,null,null,null,c)),$async$wL)
+case 4:k=f
 j=A.aZm(k)
 i=j.a
 if(i!=null){p.r7(i)
@@ -110996,7 +110996,7 @@ gaa8(){return"Month end"},
 ga9U(){return"Everyone's settled \u2014 nobody owes anybody. \ud83c\udf89"},
 gTI(){return"House"},
 gTQ(){return"Your share"},
-gTN(){return"Rent + dues"},
+gTN(){return"Rent + building fee"},
 gTH(){return"Bills"},
 gTO(){return"Shared"},
 gTP(){return"Total"},
@@ -111005,8 +111005,8 @@ TL(a){return"This month you're owed "+a},
 TK(a){return"This month you owe "+a},
 gTJ(){return"This month you're even"},
 a9X(a){return"Bills that didn't come moved to next month: "+a},
-aaf(a){return a+": waiting for amount"},
-aag(a){return a+" (last month): waiting for amount"},
+aaf(a){return a+" pending"},
+aag(a){return a+" (last month) pending"},
 gaay(){return"Take a photo"},
 gaa7(){return"Choose from library"},
 gaab(){return"New receipt picked"},
@@ -111919,7 +111919,7 @@ if(i.length<6){j=A.it($.W().gNG(),null,null)
 throw A.f(j)}if(i!==n.r.a.a){j=A.it($.W().gNF(),null,null)
 throw A.f(j)}h=B.c.dY(h.a.a)
 s=9
-return A.l(m.wL(A.Z(["display_name",B.c.dY(j.a.a)],t.N,t.z),h,i),$async$yp)
+return A.l(m.wL(A.Z(["display_name",B.c.dY(j.a.a)],t.N,t.z),h,"https://safabulat.github.io/kirisalim-site/app/",i),$async$yp)
 case 9:l=b
 if(l.a==null&&n.c!=null){n.R(new A.aGj(n))
 n.w=!1}s=7
