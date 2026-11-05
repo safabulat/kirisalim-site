@@ -53,3 +53,9 @@ footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wr
   .hero { grid-template-columns: 1fr; padding-top: 32px }
   nav { gap: 12px }
 }
+
+/* bulatapps.com — the way out to the other apps. Last in the nav, set off by a hairline, and the one
+   link that stays when the nav folds away on a phone: a visitor who came for this app is the one
+   who has not seen the others yet. */
+header nav a.hub { padding-left: 18px; border-left: 1px solid rgba(127,127,127,.35); }
+@media (max-width: 760px) { header nav a.hub { padding-left: 12px } }
